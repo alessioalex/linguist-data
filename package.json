@@ -1,0 +1,19 @@
+{
+  "name": "linguist-data",
+  "version": "1.0.0",
+  "description": "linguist's languages.yml in JSON format",
+  "main": "data.json",
+  "dependencies": {
+    "js-yaml": "^3.4.6"
+  },
+  "devDependencies": {
+    "husky": "^0.10.2"
+  },
+  "scripts": {
+    "test": "node -e \"require('./data.json')\"",
+    "build": "curl https://raw.githubusercontent.com/github/linguist/master/lib/linguist/languages.yml | js-yaml > data.json",
+    "precommit": "npm test"
+  },
+  "author": "Alexandru Vladutu <alexandru.vladutu@gmail.com>",
+  "license": "MIT"
+}
