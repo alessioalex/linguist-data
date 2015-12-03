@@ -1,17 +1,26 @@
 # linguist-data
 
-[linguist's](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml) `languages.yml` in JSON format.
+[linguist's](https://github.com/github/linguist) data in JSON format, namely [languages.yml](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml), [documentation.yml](https://github.com/github/linguist/blob/master/lib/linguist/documentation.yml), [vendor.yml](https://github.com/github/linguist/blob/master/lib/linguist/vendor.yml) and [popular.yml](https://github.com/github/linguist/blob/master/lib/linguist/popular.yml).
 
 ## usage
 
 ```js
-var languages = require('linguist-data');
-console.log(languages);
+var data = require('linguist-data');
+console.log(data);
+```
+
+.. or load what you want:
+
+```js
+var langs = require('linguist-data/languages.json');
+var docs = require('linguist-data/documentation.json');
+var vendor = require('linguist-data/vendor.json');
+var popular = require('linguist-data/popular.json');
 ```
 
 ## build
 
-The command below will regenerate `data.json`.
+The command below will regenerate all json data files.
 
 ```
 npm run build

@@ -1,0 +1,16 @@
+[
+  "^docs?/",
+  "(^|/)[Dd]ocumentation/",
+  "(^|/)javadoc/",
+  "^man/",
+  "^[Ee]xamples/",
+  "(^|/)CHANGE(S|LOG)?(\\.|$)",
+  "(^|/)CONTRIBUTING(\\.|$)",
+  "(^|/)COPYING(\\.|$)",
+  "(^|/)INSTALL(\\.|$)",
+  "(^|/)LICEN[CS]E(\\.|$)",
+  "(^|/)[Ll]icen[cs]e(\\.|$)",
+  "(^|/)README(\\.|$)",
+  "(^|/)[Rr]eadme(\\.|$)",
+  "^[Ss]amples/"
+]

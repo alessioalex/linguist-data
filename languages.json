@@ -989,6 +989,9 @@
     "ace_mode": "elixir",
     "filenames": [
       "mix.lock"
+    ],
+    "interpreters": [
+      "elixir"
     ]
   },
   "Elm": {

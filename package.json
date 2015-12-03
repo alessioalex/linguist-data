@@ -2,7 +2,7 @@
   "name": "linguist-data",
   "version": "1.0.0",
   "description": "linguist's languages.yml in JSON format",
-  "main": "data.json",
+  "main": "index.js",
   "dependencies": {
     "js-yaml": "^3.4.6"
   },
@@ -10,8 +10,12 @@
     "husky": "^0.10.2"
   },
   "scripts": {
-    "test": "node -e \"require('./data.json')\"",
-    "build": "curl https://raw.githubusercontent.com/github/linguist/master/lib/linguist/languages.yml | js-yaml > data.json",
+    "test": "node -e \"require('./')\"",
+    "build": "npm run process-langs && npm run process-docs && npm run process-vendor && npm run process-popular",
+    "process-langs": "curl https://raw.githubusercontent.com/github/linguist/master/lib/linguist/languages.yml | js-yaml > languages.json",
+    "process-docs": "curl https://raw.githubusercontent.com/github/linguist/master/lib/linguist/documentation.yml | js-yaml > documentation.json",
+    "process-vendor": "curl https://raw.githubusercontent.com/github/linguist/master/lib/linguist/vendor.yml | js-yaml > vendor.json",
+    "process-popular": "curl https://raw.githubusercontent.com/github/linguist/master/lib/linguist/popular.yml | js-yaml > popular.json",
     "precommit": "npm test"
   },
   "author": "Alexandru Vladutu <alexandru.vladutu@gmail.com>",
